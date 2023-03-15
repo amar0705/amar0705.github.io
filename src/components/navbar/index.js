@@ -45,7 +45,13 @@ export default function ButtonAppBar(props) {
               </Typography>
               <div id="nav-menu">
                 {navItem.map((item) => (
-                  <Link activeClass="active" smooth spy to={item.id}>
+                  <Link
+                    activeClass="active"
+                    smooth
+                    spy
+                    to={item.id}
+                    className={`nav-link ${item.id}`}
+                  >
                     <Button color="inherit" sx={navButton}>
                       {item.title}
                     </Button>
