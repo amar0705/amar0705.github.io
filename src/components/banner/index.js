@@ -1,9 +1,10 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import wave from "../../assets/png/hello-wave.png";
+import wave from "../../assets/gif/wave.gif";
 import portfolio from "../../assets/gif/portfolio.gif";
 import email from "../../assets/png/email.png";
 import linkedin from "../../assets/png/linkedin.png";
 import github from "../../assets/png/github.png";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
   boxStyling,
   description,
@@ -14,15 +15,32 @@ import {
 } from "./bannerCss";
 
 const Banner = () => {
+  const profileLinks = [
+    {
+      name: "linkedin",
+      src: linkedin,
+      link: "https://www.linkedin.com/in/amarjeet-kumar-423ba524a/",
+    },
+    {
+      name: "github",
+      src: github,
+      link: "https://github.com/amar0705",
+    },
+    {
+      name: "email",
+      src: email,
+      link: "amar@gmail.com",
+    },
+  ];
   return (
     <>
-      <Box mt={4} sx={{ display: "flex", flexGrow: 1, flexShrink: 0 }}>
+      <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0 }} id="home">
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <Box sx={description}>
               <Box sx={descriptionTextStyling}>
                 <Typography variant="h2" sx={{ fontWeight: 700 }} aliign="left">
-                  Hello
+                  Greetings
                 </Typography>
                 <img src={wave} alt="wave" style={imgStyle} />
                 <Typography variant="h2" sx={{ fontWeight: 800 }}>
@@ -34,12 +52,23 @@ const Banner = () => {
                 <Typography variant="h5" component="span" color="primary" sx={{ fontWeight: 700 }}>
                   Amarjeet
                 </Typography>
-                . Aspiring Full Stack Web Developer at Masai School, Life Long Learner.
+                , aspiring Full Stack Developer with a passion for developing seamless,
+                user-friendly web applications.
               </Typography>
               <Box sx={profileIcons}>
-                <img src={linkedin} alt="linkedin" style={profileIconsSize} />
-                <img src={github} alt="linkedin" style={profileIconsSize} />
-                <img src={email} alt="linkedin" style={profileIconsSize} />
+                {profileLinks.map((item) =>
+                  item.name === "email" ? (
+                    <>
+                      <CopyToClipboard text={item.link} onCopy={() => window.alert("Copied!")}>
+                        <img src={item.src} alt={item.name} style={profileIconsSize} />
+                      </CopyToClipboard>
+                    </>
+                  ) : (
+                    <a href={item.link} target="blank">
+                      <img src={item.src} alt={item.name} style={profileIconsSize} />
+                    </a>
+                  )
+                )}
               </Box>
               <Box sx={profileIcons}>
                 {" "}

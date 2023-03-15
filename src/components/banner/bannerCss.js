@@ -23,7 +23,7 @@ export const boxStyling = {
 };
 
 export const imgStyle = {
-  height: 70,
+  height: "70px",
 };
 
 export const profileIcons = {

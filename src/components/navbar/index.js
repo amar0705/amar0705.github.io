@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { Link } from "react-scroll";
 
 const classes = {
   fontWeight: 800,
@@ -13,33 +14,42 @@ const classes = {
   lineHeight: 2,
 };
 
+const mainBox = { display: "flex", flexDirection: "column" };
+
+const navButton = { padding: "10px 30px", fontWeight: 700, fontSize: 18 };
+
 export default function ButtonAppBar(props) {
+  const navItem = [
+    { id: "home", title: "Home" },
+    { id: "about", title: "About Me" },
+    { id: "skills", title: "Skills" },
+    { id: "project", title: "Project" },
+    { id: "contact", title: "Contact" },
+    { id: "about", title: "Resume" },
+  ];
   return (
     <>
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <Box sx={mainBox}>
         <Box sx={{ flexGrow: 1 }} ml={10} mr={10}>
           <AppBar
-            position="static"
+            position="fixed"
             color="navbar"
             sx={{
-              // boxShadow:
-              //   "0px 2px 4px -1px rgba(0,0,0,0.06), 0px 4px 5px 0px rgba(0,0,0,0.01), 0px 1px 10px 0px rgba(0,0,0,0.02)",
               boxShadow: "none",
+              opacity: 0.9,
             }}
           >
             <Toolbar>
               <Typography variant="h5" component="div" sx={classes}>
                 {`< Amarjeet />`}
               </Typography>
-              <Button color="inherit" sx={{ padding: "10px 30px", fontWeight: 700 }}>
-                Home
-              </Button>
-              <Button color="inherit" sx={{ padding: "10px 30px", fontWeight: 700 }}>
-                Projects
-              </Button>
-              <Button color="inherit" sx={{ padding: "10px 30px", fontWeight: 700 }}>
-                Contact
-              </Button>
+              {navItem.map((item) => (
+                <Link activeClass="active" smooth spy to={item.id}>
+                  <Button color="inherit" sx={navButton}>
+                    {item.title}
+                  </Button>
+                </Link>
+              ))}
             </Toolbar>
           </AppBar>
         </Box>
