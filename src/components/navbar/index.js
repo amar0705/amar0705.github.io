@@ -43,13 +43,15 @@ export default function ButtonAppBar(props) {
               <Typography variant="h5" component="div" sx={classes}>
                 {`< Amarjeet />`}
               </Typography>
-              {navItem.map((item) => (
-                <Link activeClass="active" smooth spy to={item.id}>
-                  <Button color="inherit" sx={navButton}>
-                    {item.title}
-                  </Button>
-                </Link>
-              ))}
+              <div id="nav-menu">
+                {navItem.map((item) => (
+                  <Link activeClass="active" smooth spy to={item.id}>
+                    <Button color="inherit" sx={navButton}>
+                      {item.title}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
             </Toolbar>
           </AppBar>
         </Box>
