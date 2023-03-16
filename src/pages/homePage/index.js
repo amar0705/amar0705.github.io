@@ -6,8 +6,12 @@ const HomePage = () => {
   return (
     <>
       <ButtonAppBar>
-        <Banner></Banner>
-        <About></About>
+        <section id="home">
+          <Banner></Banner>
+        </section>
+        <section id="about" class="about section">
+          <About></About>
+        </section>
       </ButtonAppBar>
     </>
   );

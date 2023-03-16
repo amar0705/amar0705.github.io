@@ -6,11 +6,7 @@ import { boxStyling, description } from "../banner/bannerCss";
 const About = () => {
   return (
     <>
-      <Box
-        mt={10}
-        sx={{ display: "flex", flexGrow: 1, flexShrink: 0, flexDirection: "column" }}
-        id="about"
-      >
+      <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0, flexDirection: "column" }}>
         <Box sx={{ display: "flex", justifyContent: "center" }} mb={10}>
           <Typography variant="h2" sx={{ fontWeight: 700 }}>
             About Me
@@ -33,9 +29,20 @@ const About = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box sx={description}>
-              <Typography variant="h5" color="typoText.secondary" sx={{ lineHeight: "1.5em" }}>
+              <Typography
+                variant="h5"
+                color="typoText.secondary"
+                sx={{ lineHeight: "1.5em" }}
+                id="user-detail-intro"
+              >
                 I'm{" "}
-                <Typography variant="h5" component="span" color="primary" sx={{ fontWeight: 700 }}>
+                <Typography
+                  variant="h5"
+                  component="span"
+                  color="primary"
+                  sx={{ fontWeight: 700 }}
+                  id="user-detail-name"
+                >
                   Amarjeet Kumar
                 </Typography>
                 , Analytical and detail-oriented aspiring Full Stack Developer. Capable of writing
@@ -44,7 +51,7 @@ const About = () => {
                 about coding and strongly interested in working in a product-based company.
               </Typography>
               <a href={resume} download="Amarjeet-Kumar-Resume" target="blank">
-                <Button variant="contained">
+                <Button variant="contained" id="resume-button-2">
                   <Typography
                     variant="body1"
                     color="#fff"

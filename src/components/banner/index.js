@@ -4,6 +4,7 @@ import portfolio from "../../assets/gif/portfolio.gif";
 import email from "../../assets/png/email.png";
 import linkedin from "../../assets/png/linkedin.png";
 import github from "../../assets/png/github.png";
+import phone from "../../assets/png/phone.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
   boxStyling,
@@ -31,10 +32,15 @@ const Banner = () => {
       src: email,
       link: "amar@gmail.com",
     },
+    {
+      name: "phone",
+      src: phone,
+      link: "+91-8178726246",
+    },
   ];
   return (
     <>
-      <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0 }} id="home">
+      <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <Box sx={description}>
@@ -57,14 +63,19 @@ const Banner = () => {
               </Typography>
               <Box sx={profileIcons}>
                 {profileLinks.map((item) =>
-                  item.name === "email" ? (
+                  item.name === "email" || item.name === "phone" ? (
                     <>
                       <CopyToClipboard text={item.link} onCopy={() => window.alert("Copied!")}>
-                        <img src={item.src} alt={item.name} style={profileIconsSize} />
+                        <img
+                          src={item.src}
+                          alt={item.name}
+                          style={profileIconsSize}
+                          id={`contact-${item.name}`}
+                        />
                       </CopyToClipboard>
                     </>
                   ) : (
-                    <a href={item.link} target="blank">
+                    <a href={item.link} target="blank" id={`contact-${item.name}`}>
                       <img src={item.src} alt={item.name} style={profileIconsSize} />
                     </a>
                   )
