@@ -23,9 +23,9 @@ export default function ButtonAppBar(props) {
     { id: "home", title: "Home" },
     { id: "about", title: "About Me" },
     { id: "skills", title: "Skills" },
-    { id: "project", title: "Project" },
+    { id: "projects", title: "Projects" },
     { id: "contact", title: "Contact" },
-    { id: "about", title: "Resume" },
+    { id: "resume", title: "Resume" },
   ];
   return (
     <>

@@ -22,6 +22,7 @@ const About = () => {
               <img
                 src={portfolio}
                 alt="portfolio"
+                className="home-img"
                 style={{
                   height: 400,
                   borderRadius: "50%",
