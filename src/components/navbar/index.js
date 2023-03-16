@@ -43,7 +43,7 @@ export default function ButtonAppBar(props) {
               <Typography variant="h5" component="div" sx={classes}>
                 {`< Amarjeet />`}
               </Typography>
-              <div id="nav-menu">
+              <nav title="Navbar" id="nav-menu">
                 {navItem.map((item) => (
                   <Link
                     activeClass="active"
@@ -57,7 +57,7 @@ export default function ButtonAppBar(props) {
                     </Button>
                   </Link>
                 ))}
-              </div>
+              </nav>
             </Toolbar>
           </AppBar>
         </Box>
