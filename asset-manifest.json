@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.a454cd6c.js",
+    "main.css": "/static/css/main.bdedff05.css",
+    "main.js": "/static/js/main.12980c22.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/DSC_0783 copy-photoaidcom-cropped.jpg": "/static/media/DSC_0783 copy-photoaidcom-cropped.284b2454af1b17274350.jpg",
     "static/media/portfolio.gif": "/static/media/portfolio.8a48801ecbc4c097c0d1.gif",
+    "static/media/resume.pdf": "/static/media/resume.e37eab9562a9004e6092.pdf",
+    "static/media/wave.gif": "/static/media/wave.6454c7c86bae8a8d571d.gif",
     "static/media/email.png": "/static/media/email.58839db371a508f12e98.png",
     "static/media/linkedin.png": "/static/media/linkedin.6892b3ae328c7a1e055f.png",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.a454cd6c.js.map": "/static/js/main.a454cd6c.js.map",
+    "main.bdedff05.css.map": "/static/css/main.bdedff05.css.map",
+    "main.12980c22.js.map": "/static/js/main.12980c22.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.a454cd6c.js"
+    "static/css/main.bdedff05.css",
+    "static/js/main.12980c22.js"
   ]
 }
