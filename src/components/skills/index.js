@@ -1,45 +1,10 @@
-import { Box, Button, Grid, List, ListItem, Typography } from "@mui/material";
-import wave from "../../assets/gif/wave.gif";
+import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 import skills from "../../assets/skills/skills.png";
-import email from "../../assets/png/email.png";
-import linkedin from "../../assets/png/linkedin.png";
-import github from "../../assets/png/github.png";
-import phone from "../../assets/png/phone.png";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import {
-  boxStyling,
-  description,
-  descriptionTextStyling,
-  imgStyle,
-  profileIcons,
-  profileIconsSize,
-} from "../banner/bannerCss";
+import { boxStyling, description } from "../banner/bannerCss";
 
 const Skills = () => {
-  const profileLinks = [
-    {
-      name: "linkedin",
-      src: linkedin,
-      link: "https://www.linkedin.com/in/amarjeet-kumar-423ba524a/",
-    },
-    {
-      name: "github",
-      src: github,
-      link: "https://github.com/amar0705",
-    },
-    {
-      name: "email",
-      src: email,
-      link: "amar@gmail.com",
-    },
-    {
-      name: "phone",
-      src: phone,
-      link: "+91-8178726246",
-    },
-  ];
   return (
-    <>
+    <div className="skills-card">
       <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0, flexDirection: "column" }}>
         <Box sx={{ display: "flex", justifyContent: "center" }} mb={10}>
           <Typography variant="h2">My Skills</Typography>
@@ -90,8 +55,7 @@ const Skills = () => {
           </Grid>
         </Grid>
       </Box>
-      <img alt="git" src="https://github-readme-stats.vercel.app/api?username=amar0705" />
-    </>
+    </div>
   );
 };
 

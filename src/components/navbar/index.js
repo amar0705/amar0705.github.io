@@ -11,6 +11,7 @@ import { Drawer } from "@mui/material";
 import NavMenuList from "./drawer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import resume from "../../assets/pdf/resume.pdf";
 
 const classes = {
   fontWeight: 1000,
@@ -66,20 +67,34 @@ export default function ButtonAppBar(props) {
               {!matches ? (
                 <Box>
                   <nav id="nav-menu">
-                    {navItem.map((item) => (
-                      <Link
-                        activeClass="active"
-                        smooth
-                        spy
-                        to={item.id}
-                        className={`nav-link ${item.id}`}
-                        key={item.id}
-                      >
-                        <Button color="inherit" sx={navButton}>
-                          {item.title}
-                        </Button>
-                      </Link>
-                    ))}
+                    {navItem.map((item) =>
+                      item.id === "resume" ? (
+                        <a
+                          href={resume}
+                          download="Amarjeet-Kumar-Resume"
+                          target="blank"
+                          className={`nav-link ${item.id}`}
+                          key={item.id}
+                        >
+                          <Button color="primary" sx={navButton} id="resume-button-1">
+                            {item.title}
+                          </Button>
+                        </a>
+                      ) : (
+                        <Link
+                          activeClass="active"
+                          smooth
+                          spy
+                          to={item.id}
+                          className={`nav-link ${item.id}`}
+                          key={item.id}
+                        >
+                          <Button color="inherit" sx={navButton}>
+                            {item.title}
+                          </Button>
+                        </Link>
+                      )
+                    )}
                   </nav>
                 </Box>
               ) : (
