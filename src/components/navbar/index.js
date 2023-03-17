@@ -22,11 +22,15 @@ const classes = {
 
 const mainBox = { display: "flex", flexDirection: "column" };
 
-const navButton = { padding: "10px 30px", fontWeight: 700, fontSize: 18 };
+const navButton = {
+  padding: { lg: "10px 30px", md: "10px 17px" },
+  fontWeight: 700,
+  fontSize: 18,
+};
 
 export default function ButtonAppBar(props) {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("lg"));
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   const navItem = [
     { id: "home", title: "Home" },
     { id: "about", title: "About Me" },
