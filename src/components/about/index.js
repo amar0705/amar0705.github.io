@@ -8,9 +8,7 @@ const About = () => {
     <>
       <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0, flexDirection: "column" }}>
         <Box sx={{ display: "flex", justifyContent: "center" }} mb={10}>
-          <Typography variant="h2" sx={{ fontWeight: 700 }}>
-            About Me
-          </Typography>
+          <Typography variant="h2">About Me</Typography>
         </Box>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
@@ -20,7 +18,7 @@ const About = () => {
                 alt="portfolio"
                 className="home-img"
                 style={{
-                  height: 400,
+                  width: "75%",
                   borderRadius: "50%",
                   boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
                 }}
@@ -32,7 +30,7 @@ const About = () => {
               <Typography
                 variant="h5"
                 color="typoText.secondary"
-                sx={{ lineHeight: "1.5em" }}
+                sx={{ lineHeight: "1.5em", textAlign: { md: "left", xs: "center" } }}
                 id="user-detail-intro"
               >
                 I'm{" "}

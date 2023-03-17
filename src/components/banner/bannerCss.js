@@ -10,7 +10,7 @@ export const description = {
 export const descriptionTextStyling = {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "left",
+  justifyContent: { xs: "center", md: "left" },
   alignItems: "center",
   width: "100%",
 };
@@ -20,6 +20,7 @@ export const boxStyling = {
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
+  height: "100%",
 };
 
 export const imgStyle = {
@@ -29,7 +30,7 @@ export const imgStyle = {
 export const profileIcons = {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "left",
+  justifyContent: { xs: "center", md: "left" },
   gap: 2,
   width: "100%",
 };

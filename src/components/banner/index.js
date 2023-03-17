@@ -45,15 +45,15 @@ const Banner = () => {
           <Grid item xs={12} md={6}>
             <Box sx={description}>
               <Box sx={descriptionTextStyling}>
-                <Typography variant="h2" sx={{ fontWeight: 700 }} aliign="left">
-                  Greetings
-                </Typography>
+                <Typography variant="h2">Greetings</Typography>
                 <img src={wave} alt="wave" style={imgStyle} />
-                <Typography variant="h2" sx={{ fontWeight: 800 }}>
-                  .
-                </Typography>
+                <Typography variant="h2">.</Typography>
               </Box>
-              <Typography variant="h5" color="typoText.secondary">
+              <Typography
+                variant="h5"
+                color="typoText.secondary"
+                sx={{ textAlign: { xs: "center", md: "left" } }}
+              >
                 I'm{" "}
                 <Typography variant="h5" component="span" color="primary" sx={{ fontWeight: 700 }}>
                   Amarjeet
@@ -101,7 +101,7 @@ const Banner = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box sx={boxStyling}>
-              <img src={portfolio} alt="portfolio" />
+              <img src={portfolio} alt="portfolio" style={{ width: "75%" }} />
             </Box>
           </Grid>
         </Grid>

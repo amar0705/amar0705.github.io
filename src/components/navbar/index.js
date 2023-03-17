@@ -7,10 +7,10 @@ import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
 
 const classes = {
-  fontWeight: 800,
+  fontWeight: 1000,
   flexGrow: 1,
-  fontFamily: "Courier New, monospace",
-  fontSize: 28,
+  fontFamily: "Fira Code",
+  fontSize: "30px !important",
   lineHeight: 2,
 };
 
@@ -30,20 +30,21 @@ export default function ButtonAppBar(props) {
   return (
     <>
       <Box sx={mainBox}>
-        <Box sx={{ flexGrow: 1 }} ml={10} mr={10}>
+        <Box sx={{ flexGrow: 1 }}>
           <AppBar
             position="fixed"
             color="navbar"
             sx={{
               boxShadow: "none",
               opacity: 0.9,
+              padding: 2,
             }}
           >
             <Toolbar>
               <Typography variant="h5" component="div" sx={classes}>
                 {`< Amarjeet />`}
               </Typography>
-              <nav title="Navbar" id="nav-menu">
+              <Box id="nav-menu" sx={{ display: { lg: "flex", md: "none", xs: "none" } }}>
                 {navItem.map((item) => (
                   <Link
                     activeClass="active"
@@ -57,13 +58,11 @@ export default function ButtonAppBar(props) {
                     </Button>
                   </Link>
                 ))}
-              </nav>
+              </Box>
             </Toolbar>
           </AppBar>
         </Box>
-        <Box ml={20} mr={20}>
-          {props.children}
-        </Box>
+        <Box sx={{ width: "85%", margin: "auto" }}>{props.children}</Box>
       </Box>
     </>
   );

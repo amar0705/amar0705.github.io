@@ -1,6 +1,7 @@
 import "./App.css";
 import HomePage from "./pages/homePage";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import "@fontsource/fira-code";
 
 const theme = createTheme({
   palette: {
@@ -16,19 +17,20 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(","),
-
+    h2: {
+      fontWeight: 1000,
+      fontSize: "4.5rem",
+      "@media (max-width:700px)": {
+        fontSize: "2.8rem",
+      },
+    },
+    h5: {
+      fontSize: "1.5rem",
+      "@media (max-width:700px)": {
+        fontSize: "1.3rem",
+      },
+    },
+    fontFamily: ["Nunito", "Roboto", '"Helvetica Neue"', "Arial", "sans-serif"].join(","),
     button: {
       textTransform: "none",
     },
