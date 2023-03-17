@@ -42,3 +42,11 @@ export const profileIconsSize = {
     height: 80,
   },
 };
+
+export const profileIconsSizeContact = {
+  height: 40,
+  cursor: "pointer",
+  "&:hover": {
+    height: 50,
+  },
+};

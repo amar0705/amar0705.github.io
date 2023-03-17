@@ -9,7 +9,7 @@ const GitCalendar = () => {
     <>
       <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0, flexDirection: "column" }}>
         <Box sx={{ display: "flex", justifyContent: "center" }} mb={10}>
-          <Typography variant="h2">My Github Statistics</Typography>
+          <Typography variant="h2">My Github Calendar</Typography>
         </Box>
         <Grid container spacing={2}>
           <Grid item xs={12} md={12}>

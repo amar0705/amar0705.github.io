@@ -50,7 +50,12 @@ const Skills = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box sx={boxStyling}>
-              <img src={skills} alt="portfolio" style={{ width: "75%" }} />
+              <img
+                src={skills}
+                alt="portfolio"
+                style={{ width: "75%" }}
+                className="skills-card-img"
+              />
             </Box>
           </Grid>
         </Grid>

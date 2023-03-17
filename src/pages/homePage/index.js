@@ -19,7 +19,9 @@ const HomePage = () => {
         <section id="skills" className="skills section" style={sectionPadding}>
           <Skills></Skills>
         </section>
-        <Stats></Stats>
+        <section style={sectionPadding}>
+          <Stats></Stats>
+        </section>
         <GitCalendar />
       </ButtonAppBar>
     </>
