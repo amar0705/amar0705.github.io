@@ -11,7 +11,7 @@ const HomePage = () => {
         <section id="home" style={sectionPadding}>
           <Banner></Banner>
         </section>
-        <section id="about" class="about section" style={sectionPadding}>
+        <section id="about" className="about section" style={sectionPadding}>
           <About></About>
         </section>
       </ButtonAppBar>

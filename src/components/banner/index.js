@@ -64,7 +64,7 @@ const Banner = () => {
               <Box sx={profileIcons}>
                 {profileLinks.map((item) =>
                   item.name === "email" || item.name === "phone" ? (
-                    <>
+                    <div key={item.name}>
                       <CopyToClipboard text={item.link} onCopy={() => window.alert("Copied!")}>
                         <img
                           src={item.src}
@@ -73,9 +73,9 @@ const Banner = () => {
                           id={`contact-${item.name}`}
                         />
                       </CopyToClipboard>
-                    </>
+                    </div>
                   ) : (
-                    <a href={item.link} target="blank" id={`contact-${item.name}`}>
+                    <a href={item.link} target="blank" id={`contact-${item.name}`} key={item.name}>
                       <img src={item.src} alt={item.name} style={profileIconsSize} />
                     </a>
                   )
