@@ -1,7 +1,7 @@
 import About from "../../components/about";
 import Banner from "../../components/banner";
 import ButtonAppBar from "../../components/navbar";
-
+import Skills from "../../components/skills";
 const sectionPadding = { paddingTop: "6%" };
 
 const HomePage = () => {
@@ -13,6 +13,9 @@ const HomePage = () => {
         </section>
         <section id="about" className="about section" style={sectionPadding}>
           <About></About>
+        </section>
+        <section id="skills" className="skills section" style={sectionPadding}>
+          <Skills></Skills>
         </section>
       </ButtonAppBar>
     </>

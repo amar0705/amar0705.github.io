@@ -55,31 +55,25 @@ export default function ButtonAppBar(props) {
               <Typography variant="h5" component="div" sx={classes}>
                 {`< Amarjeet />`}
               </Typography>
-              <Box
-                id="nav-menu"
-                component="nav"
-                sx={{ display: { lg: "flex", md: "none", xs: "none" } }}
-              >
-                {navItem.map((item) => (
-                  <Link
-                    activeClass="active"
-                    smooth
-                    spy
-                    to={item.id}
-                    className={`nav-link ${item.id}`}
-                    key={item.id}
-                  >
-                    <Button color="inherit" sx={navButton}>
-                      {item.title}
-                    </Button>
-                  </Link>
-                ))}
+              <Box sx={{ display: { lg: "flex", md: "none", xs: "none" } }}>
+                <nav id="nav-menu">
+                  {navItem.map((item) => (
+                    <Link
+                      activeClass="active"
+                      smooth
+                      spy
+                      to={item.id}
+                      className={`nav-link ${item.id}`}
+                      key={item.id}
+                    >
+                      <Button color="inherit" sx={navButton}>
+                        {item.title}
+                      </Button>
+                    </Link>
+                  ))}
+                </nav>
               </Box>
-              <Box
-                component="nav"
-                id="nav-menu"
-                sx={{ display: { lg: "none", md: "flex", xs: "flex" } }}
-              >
+              <Box sx={{ display: { lg: "none", md: "flex", xs: "flex" } }}>
                 <IconButton color="inherit" component="label" onClick={toggleDrawer}>
                   <MenuIcon />
                 </IconButton>
