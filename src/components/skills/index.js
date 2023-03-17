@@ -90,6 +90,7 @@ const Skills = () => {
           </Grid>
         </Grid>
       </Box>
+      <img alt="git" src="https://github-readme-stats.vercel.app/api?username=amar0705" />
     </>
   );
 };

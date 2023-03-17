@@ -9,6 +9,8 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer } from "@mui/material";
 import NavMenuList from "./drawer";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const classes = {
   fontWeight: 1000,
@@ -23,6 +25,8 @@ const mainBox = { display: "flex", flexDirection: "column" };
 const navButton = { padding: "10px 30px", fontWeight: 700, fontSize: 18 };
 
 export default function ButtonAppBar(props) {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("lg"));
   const navItem = [
     { id: "home", title: "Home" },
     { id: "about", title: "About Me" },
@@ -55,32 +59,35 @@ export default function ButtonAppBar(props) {
               <Typography variant="h5" component="div" sx={classes}>
                 {`< Amarjeet />`}
               </Typography>
-              <Box sx={{ display: { lg: "flex", md: "none", xs: "none" } }}>
-                <nav id="nav-menu">
-                  {navItem.map((item) => (
-                    <Link
-                      activeClass="active"
-                      smooth
-                      spy
-                      to={item.id}
-                      className={`nav-link ${item.id}`}
-                      key={item.id}
-                    >
-                      <Button color="inherit" sx={navButton}>
-                        {item.title}
-                      </Button>
-                    </Link>
-                  ))}
-                </nav>
-              </Box>
-              <Box sx={{ display: { lg: "none", md: "flex", xs: "flex" } }}>
-                <IconButton color="inherit" component="label" onClick={toggleDrawer}>
-                  <MenuIcon />
-                </IconButton>
-                <Drawer anchor="right" open={openDrawer} onClose={toggleDrawer}>
-                  <NavMenuList toggleDrawer={toggleDrawer} navMenuItem={navItem} />
-                </Drawer>
-              </Box>
+              {!matches ? (
+                <Box>
+                  <nav id="nav-menu">
+                    {navItem.map((item) => (
+                      <Link
+                        activeClass="active"
+                        smooth
+                        spy
+                        to={item.id}
+                        className={`nav-link ${item.id}`}
+                        key={item.id}
+                      >
+                        <Button color="inherit" sx={navButton}>
+                          {item.title}
+                        </Button>
+                      </Link>
+                    ))}
+                  </nav>
+                </Box>
+              ) : (
+                <Box>
+                  <IconButton color="inherit" component="label" onClick={toggleDrawer}>
+                    <MenuIcon />
+                  </IconButton>
+                  <Drawer anchor="right" open={openDrawer} onClose={toggleDrawer}>
+                    <NavMenuList toggleDrawer={toggleDrawer} navMenuItem={navItem} />
+                  </Drawer>
+                </Box>
+              )}
             </Toolbar>
           </AppBar>
         </Box>
