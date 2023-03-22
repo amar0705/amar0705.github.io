@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import resume from "../../assets/pdf/resume.pdf";
 import portfolio from "../../assets/png/DSC_0783 copy-photoaidcom-cropped.jpg";
 import { boxStyling, description } from "../banner/bannerCss";
+import sample from "../../assets/pdf/sample.pdf";
 
 const About = () => {
   return (
@@ -51,7 +52,7 @@ const About = () => {
                 about coding and strongly interested in working in a product-based company.
               </Typography>
               <a
-                href={resume}
+                href={sample}
                 id="resume-button-2"
                 download="Amarjeet-Kumar-Resume"
                 target="blank"

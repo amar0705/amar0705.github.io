@@ -18,6 +18,7 @@ import linkedin from "../../assets/png/linkedin.png";
 import github from "../../assets/png/github.png";
 import { profileIconsSizeContact } from "../banner/bannerCss";
 import CopyToClipboard from "react-copy-to-clipboard";
+import sample from "../../assets/pdf/sample.pdf";
 
 const classes = {
   fontWeight: 1000,
@@ -94,19 +95,19 @@ export default function ButtonAppBar(props) {
                   <nav id="nav-menu">
                     {navItem.map((item) =>
                       item.id === "resume" ? (
-                        // <a
-                        //   href={resume}
-                        //   download="Amarjeet-Kumar-Resume"
-                        //   target="blank"
-                        //   className={`nav-link ${item.id}`}
-                        //   key={item.id}
-                        //   id="resume-button-1"
-                        // >
-                        <Button color="primary" sx={navButton} endIcon={<DownloadIcon />}>
-                          {item.title}
-                        </Button>
+                        <a
+                          href={sample}
+                          download="Amarjeet-Kumar-Resume"
+                          target="blank"
+                          className={`nav-link ${item.id}`}
+                          key={item.id}
+                          id="resume-button-1"
+                        >
+                          <Button color="primary" sx={navButton} endIcon={<DownloadIcon />}>
+                            {item.title}
+                          </Button>
+                        </a>
                       ) : (
-                        // </a>
                         <Link
                           activeClass="active"
                           smooth
