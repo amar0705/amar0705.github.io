@@ -8,8 +8,10 @@ const Stats = () => {
   return (
     <>
       <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0, flexDirection: "column" }}>
-        <Box sx={{ display: "flex", justifyContent: "center" }} mb={10}>
-          <Typography variant="h2">My Github Statistics</Typography>
+        <Box sx={{ display: "flex", justifyContent: "center" }} mb={8}>
+          <Typography variant="h2" align="center">
+            My Github Statistics
+          </Typography>
         </Box>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
@@ -29,6 +31,15 @@ const Stats = () => {
                 src={`https://github-readme-stats.vercel.app/api?username=amar0705&show_icons=true&title_color=000&icon_color=${themeTitleColor}`}
                 alt="portfolio"
                 style={{ width: "100%" }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={12} mt={5}>
+            <Box sx={boxStyling}>
+              <img
+                id="github-streak-stats"
+                src={`https://streak-stats.demolab.com/?user=amar0705`}
+                alt="portfolio"
               />
             </Box>
           </Grid>

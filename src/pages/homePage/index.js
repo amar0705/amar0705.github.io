@@ -2,6 +2,7 @@ import About from "../../components/about";
 import Banner from "../../components/banner";
 import GitCalendar from "../../components/gitCalendar";
 import ButtonAppBar from "../../components/navbar";
+import Projects from "../../components/projects";
 import Skills from "../../components/skills";
 import Stats from "../../components/stats";
 const sectionPadding = { paddingTop: "6%" };
@@ -19,10 +20,15 @@ const HomePage = () => {
         <section id="skills" className="skills section" style={sectionPadding}>
           <Skills></Skills>
         </section>
+        <section id="projects" className="projects section" style={sectionPadding}>
+          <Projects></Projects>
+        </section>
         <section style={sectionPadding}>
           <Stats></Stats>
         </section>
-        <GitCalendar />
+        <section style={sectionPadding}>
+          <GitCalendar />
+        </section>
       </ButtonAppBar>
     </>
   );
