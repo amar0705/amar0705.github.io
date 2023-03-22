@@ -14,6 +14,7 @@ import {
   profileIcons,
   profileIconsSize,
 } from "./bannerCss";
+import { Link } from "react-scroll";
 
 const Banner = () => {
   const profileLinks = [
@@ -83,19 +84,21 @@ const Banner = () => {
               </Box>
               <Box sx={profileIcons}>
                 {" "}
-                <Button variant="contained">
-                  <Typography
-                    variant="body1"
-                    color="#fff"
-                    pl={5}
-                    pr={5}
-                    pt={1}
-                    pb={1}
-                    sx={{ fontWeight: 600 }}
-                  >
-                    Contact Me
-                  </Typography>
-                </Button>
+                <Link activeClass="active" smooth spy to="contact">
+                  <Button variant="contained">
+                    <Typography
+                      variant="body1"
+                      color="#fff"
+                      pl={5}
+                      pr={5}
+                      pt={1}
+                      pb={1}
+                      sx={{ fontWeight: 600 }}
+                    >
+                      Contact Me
+                    </Typography>
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Grid>

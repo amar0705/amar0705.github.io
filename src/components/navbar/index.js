@@ -100,6 +100,7 @@ export default function ButtonAppBar(props) {
                           target="blank"
                           className={`nav-link ${item.id}`}
                           key={item.id}
+                          id="resume-button-1"
                         >
                           <Button
                             color="primary"
