@@ -1,30 +1,40 @@
 {
   "files": {
     "main.css": "/static/css/main.57a8455d.css",
-    "main.js": "/static/js/main.fe36af46.js",
+    "main.js": "/static/js/main.c4eb8ac3.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/DSC_0783 copy-photoaidcom-cropped.jpg": "/static/media/DSC_0783 copy-photoaidcom-cropped.284b2454af1b17274350.jpg",
     "static/media/portfolio.gif": "/static/media/portfolio.8a48801ecbc4c097c0d1.gif",
     "static/media/resume.pdf": "/static/media/resume.e37eab9562a9004e6092.pdf",
+    "static/media/projects.gif": "/static/media/projects.a1dab7f324e0420513fe.gif",
     "static/media/skills.png": "/static/media/skills.9c190a44986f081b9d79.png",
     "static/media/wave.gif": "/static/media/wave.6454c7c86bae8a8d571d.gif",
+    "static/media/meat-me-once.jpeg": "/static/media/meat-me-once.bc2808675db922152428.jpeg",
+    "static/media/better-buys.jpg": "/static/media/better-buys.9caf7f41ce31dea7d710.jpg",
     "static/media/fira-code-all-400-normal.woff": "/static/media/fira-code-all-400-normal.c050f0ce726c76d279c8.woff",
+    "static/media/optimum-fitness.jpg": "/static/media/optimum-fitness.56bdd02d6ab4038551a4.jpg",
     "static/media/phone.png": "/static/media/phone.3fbb2f7838bee708e74a.png",
+    "static/media/fitoryx.jpg": "/static/media/fitoryx.a7521549533dd908939a.jpg",
     "static/media/fira-code-latin-400-normal.woff2": "/static/media/fira-code-latin-400-normal.e662d57ce51fba1f46e3.woff2",
+    "static/media/nodejs-logo-1.png": "/static/media/nodejs-logo-1.7b7c4003e702ffb3aeeb.png",
     "static/media/email.png": "/static/media/email.58839db371a508f12e98.png",
+    "static/media/mongo.png": "/static/media/mongo.9b774396ebc8b445c490.png",
+    "static/media/css.png": "/static/media/css.286a9900f844f7c0ed5f.png",
+    "static/media/html5.png": "/static/media/html5.94972f53c025a8fb7e2b.png",
     "static/media/linkedin.png": "/static/media/linkedin.6892b3ae328c7a1e055f.png",
     "static/media/fira-code-cyrillic-ext-400-normal.woff2": "/static/media/fira-code-cyrillic-ext-400-normal.8ae7ba46c49a0347ea65.woff2",
+    "static/media/js.png": "/static/media/js.266bd9fb2663dcc057b4.png",
     "static/media/fira-code-greek-400-normal.woff2": "/static/media/fira-code-greek-400-normal.fdf1c77f42d62a5dc722.woff2",
     "static/media/fira-code-latin-ext-400-normal.woff2": "/static/media/fira-code-latin-ext-400-normal.f688c1c39f363f86fd4a.woff2",
     "static/media/fira-code-cyrillic-400-normal.woff2": "/static/media/fira-code-cyrillic-400-normal.3b12523542a36f074eff.woff2",
     "static/media/fira-code-greek-ext-400-normal.woff2": "/static/media/fira-code-greek-ext-400-normal.0e81dfaccdc5adb60d7c.woff2",
     "index.html": "/index.html",
     "main.57a8455d.css.map": "/static/css/main.57a8455d.css.map",
-    "main.fe36af46.js.map": "/static/js/main.fe36af46.js.map",
+    "main.c4eb8ac3.js.map": "/static/js/main.c4eb8ac3.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57a8455d.css",
-    "static/js/main.fe36af46.js"
+    "static/js/main.c4eb8ac3.js"
   ]
 }
