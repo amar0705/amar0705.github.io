@@ -50,7 +50,15 @@ const About = () => {
                 Express and MongoDB on the backend to build single page applications. Passionate
                 about coding and strongly interested in working in a product-based company.
               </Typography>
-              <a href={resume} id="resume-button-2" download="Amarjeet-Kumar-Resume" target="blank">
+              <a
+                href={resume}
+                id="resume-button-2"
+                download="Amarjeet-Kumar-Resume"
+                target="blank"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
                 <Button variant="contained">
                   <Typography
                     variant="body1"
