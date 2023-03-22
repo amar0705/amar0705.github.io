@@ -36,11 +36,14 @@ const Stats = () => {
           </Grid>
           <Grid item xs={12} md={12} mt={5}>
             <Box sx={boxStyling}>
-              <img
-                id="github-streak-stats"
-                src={`https://streak-stats.demolab.com/?user=amar0705`}
-                alt="portfolio"
-              />
+              <Box sx={{ width: { md: "57%", xs: "100%" } }}>
+                <img
+                  id="github-streak-stats"
+                  src={`https://github-readme-streak-stats.herokuapp.com?user=amar0705`}
+                  alt="portfolio"
+                  style={{ width: "100%" }}
+                />
+              </Box>
             </Box>
           </Grid>
         </Grid>
