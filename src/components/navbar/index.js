@@ -94,19 +94,19 @@ export default function ButtonAppBar(props) {
                   <nav id="nav-menu">
                     {navItem.map((item) =>
                       item.id === "resume" ? (
-                        <a
-                          href={resume}
-                          download="Amarjeet-Kumar-Resume"
-                          target="blank"
-                          className={`nav-link ${item.id}`}
-                          key={item.id}
-                          id="resume-button-1"
-                        >
-                          <Button color="primary" sx={navButton} endIcon={<DownloadIcon />}>
-                            {item.title}
-                          </Button>
-                        </a>
+                        // <a
+                        //   href={resume}
+                        //   download="Amarjeet-Kumar-Resume"
+                        //   target="blank"
+                        //   className={`nav-link ${item.id}`}
+                        //   key={item.id}
+                        //   id="resume-button-1"
+                        // >
+                        <Button color="primary" sx={navButton} endIcon={<DownloadIcon />}>
+                          {item.title}
+                        </Button>
                       ) : (
+                        // </a>
                         <Link
                           activeClass="active"
                           smooth
