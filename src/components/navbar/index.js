@@ -102,12 +102,7 @@ export default function ButtonAppBar(props) {
                           key={item.id}
                           id="resume-button-1"
                         >
-                          <Button
-                            color="primary"
-                            sx={navButton}
-                            id="resume-button-1"
-                            endIcon={<DownloadIcon />}
-                          >
+                          <Button color="primary" sx={navButton} endIcon={<DownloadIcon />}>
                             {item.title}
                           </Button>
                         </a>

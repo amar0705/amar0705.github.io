@@ -51,7 +51,7 @@ const About = () => {
                 about coding and strongly interested in working in a product-based company.
               </Typography>
               <a href={resume} id="resume-button-2" download="Amarjeet-Kumar-Resume" target="blank">
-                <Button variant="contained" id="resume-button-2">
+                <Button variant="contained">
                   <Typography
                     variant="body1"
                     color="#fff"

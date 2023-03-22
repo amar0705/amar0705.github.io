@@ -38,12 +38,12 @@ export default function ProjectsData({ project }) {
             </Grid>
             <Grid item xs={6} md={6}>
               <Box sx={{ display: "flex", justifyContent: "right", gap: 2, alignItems: "center" }}>
-                <a href={project.github} target="blank">
+                <a href={project.github} target="blank" className="project-github-link">
                   <IconButton>
                     <img src={github} alt="github-link" style={{ height: "30px" }} />
                   </IconButton>
                 </a>
-                <a href={project.live} target="blank">
+                <a href={project.live} target="blank" className="project-deployed-link">
                   <Button variant="contained">
                     <Typography variant="body1" color="#fff" sx={{ fontWeight: 600 }}>
                       View Live
