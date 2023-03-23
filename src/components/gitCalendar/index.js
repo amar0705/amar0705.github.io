@@ -9,7 +9,6 @@ import "github-calendar/dist/github-calendar-responsive.css";
 const GitCalendar = () => {
   const calendarRef = useRef(null);
   useEffect(() => {
-    console.log(calendarRef.current);
     GitHubCalendar(calendarRef.current, "amar0705", { responsive: true });
   }, []);
   return (
