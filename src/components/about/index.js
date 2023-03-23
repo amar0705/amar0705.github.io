@@ -57,7 +57,7 @@ const About = () => {
                   target="blank"
                   id="resume-link-2"
                   onClick={() => {
-                    window.location.assign(
+                    window.open(
                       "https://drive.google.com/file/d/1viDpZ6ryJDTF3p5pKTaNcBxSuKHQl-Ea/view?usp=sharing",
                       "_blank"
                     );
