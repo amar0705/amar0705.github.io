@@ -2,7 +2,6 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import resume from "../../assets/pdf/resume.pdf";
 import portfolio from "../../assets/png/DSC_0783 copy-photoaidcom-cropped.jpg";
 import { boxStyling, description } from "../banner/bannerCss";
-import sample from "../../assets/pdf/sample.pdf";
 
 const About = () => {
   return (
@@ -51,16 +50,19 @@ const About = () => {
                 Express and MongoDB on the backend to build single page applications. Passionate
                 about coding and strongly interested in working in a product-based company.
               </Typography>
-              <a
-                href={sample}
-                id="resume-button-2"
-                download="Amarjeet-Kumar-Resume"
-                target="blank"
-                onClick={(e) => {
-                  e.stopPropagation();
-                }}
-              >
-                <Button variant="contained">
+              <Button variant="contained" id="resume-button-2">
+                <a
+                  href={resume}
+                  download="Amarjeet-Kumar-Resume"
+                  target="blank"
+                  id="resume-link-2"
+                  onClick={() => {
+                    window.location.assign(
+                      "https://drive.google.com/file/d/1viDpZ6ryJDTF3p5pKTaNcBxSuKHQl-Ea/view?usp=sharing",
+                      "_blank"
+                    );
+                  }}
+                >
                   <Typography
                     variant="body1"
                     color="#fff"
@@ -72,8 +74,8 @@ const About = () => {
                   >
                     My Resume
                   </Typography>
-                </Button>
-              </a>
+                </a>
+              </Button>
             </Box>
           </Grid>
         </Grid>

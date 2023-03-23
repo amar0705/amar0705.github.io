@@ -18,7 +18,6 @@ import linkedin from "../../assets/png/linkedin.png";
 import github from "../../assets/png/github.png";
 import { profileIconsSizeContact } from "../banner/bannerCss";
 import CopyToClipboard from "react-copy-to-clipboard";
-import sample from "../../assets/pdf/sample.pdf";
 
 const classes = {
   fontWeight: 1000,
@@ -96,7 +95,7 @@ export default function ButtonAppBar(props) {
                     {navItem.map((item) =>
                       item.id === "resume" ? (
                         <a
-                          href={sample}
+                          href={resume}
                           download="Amarjeet-Kumar-Resume"
                           target="blank"
                           className={`nav-link ${item.id}`}

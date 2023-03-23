@@ -19,10 +19,7 @@ export default function ProjectsData({ project }) {
         <CardMedia component="img" height="320" image={project.image} alt={project.id} />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-            <span className="project-description">
-              This impressive paella is a perfect party dish and a fun meal to cook together with
-              your guests. Add 1 cup of frozen peas along with the mussels, if you like.
-            </span>
+            <span className="project-description">{project?.description}</span>
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
