@@ -1,10 +1,17 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { boxStyling } from "../banner/bannerCss";
-import GitHubCalendar from "react-github-calendar";
-import { useTheme } from "@mui/material/styles";
+import { useEffect, useRef } from "react";
+import GitHubCalendar from "github-calendar";
+import "github-calendar/dist/github-calendar.min.js";
+import "github-calendar/dist/github-calendar.css";
+import "github-calendar/dist/github-calendar-responsive.css";
 
 const GitCalendar = () => {
-  const theme = useTheme();
+  const calendarRef = useRef(null);
+  useEffect(() => {
+    console.log(calendarRef.current);
+    GitHubCalendar(calendarRef.current, "amar0705", { responsive: true });
+  }, []);
   return (
     <>
       <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0, flexDirection: "column" }}>
@@ -16,12 +23,11 @@ const GitCalendar = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={12}>
             <Box sx={boxStyling}>
-              <div className="react-activity-calendar">
-                <GitHubCalendar
-                  username="amar0705"
-                  color={theme.palette.primary.main}
-                ></GitHubCalendar>
-              </div>
+              <div
+                className="react-activity-calendar"
+                ref={calendarRef}
+                style={{ width: "100%" }}
+              ></div>
             </Box>{" "}
           </Grid>
         </Grid>

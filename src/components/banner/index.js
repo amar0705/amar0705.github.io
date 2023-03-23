@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Slide, Typography } from "@mui/material";
 import wave from "../../assets/gif/wave.gif";
 import portfolio from "../../assets/gif/portfolio.gif";
 import email from "../../assets/png/email.png";
@@ -15,6 +15,7 @@ import {
   profileIconsSize,
 } from "./bannerCss";
 import { Link } from "react-scroll";
+import createNotification from "../../utils/alert";
 
 const Banner = () => {
   const profileLinks = [
@@ -44,68 +45,91 @@ const Banner = () => {
       <Box mt={10} sx={{ display: "flex", flexGrow: 1, flexShrink: 0 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <Box sx={description}>
-              <Box sx={descriptionTextStyling}>
-                <Typography variant="h2">Greetings</Typography>
-                <img src={wave} alt="wave" style={imgStyle} />
-                <Typography variant="h2">.</Typography>
-              </Box>
-              <Typography
-                variant="h5"
-                color="typoText.secondary"
-                sx={{ textAlign: { xs: "center", md: "left" } }}
-              >
-                I'm{" "}
-                <Typography variant="h5" component="span" color="primary" sx={{ fontWeight: 700 }}>
-                  Amarjeet
+            <Slide direction="right" in={true} mountOnEnter unmountOnExit timeout={1000}>
+              <Box sx={description}>
+                <Box sx={descriptionTextStyling}>
+                  <Typography variant="h2">Greetings</Typography>
+                  <img src={wave} alt="wave" style={imgStyle} />
+                  <Typography variant="h2">.</Typography>
+                </Box>
+                <Typography
+                  variant="h5"
+                  color="typoText.secondary"
+                  sx={{ textAlign: { xs: "center", md: "left" } }}
+                >
+                  I'm{" "}
+                  <Typography
+                    variant="h5"
+                    component="span"
+                    color="primary"
+                    sx={{ fontWeight: 700 }}
+                  >
+                    Amarjeet
+                  </Typography>
+                  , aspiring Full Stack Developer with a passion for developing seamless,
+                  user-friendly web applications.
                 </Typography>
-                , aspiring Full Stack Developer with a passion for developing seamless,
-                user-friendly web applications.
-              </Typography>
-              <Box sx={profileIcons}>
-                {profileLinks.map((item) =>
-                  item.name === "email" || item.name === "phone" ? (
-                    <div key={item.name}>
-                      <CopyToClipboard text={item.link} onCopy={() => window.alert("Copied!")}>
-                        <img
-                          src={item.src}
-                          alt={item.name}
-                          style={profileIconsSize}
-                          id={`contact-${item.name}`}
-                        />
-                      </CopyToClipboard>
-                    </div>
-                  ) : (
-                    <a href={item.link} target="blank" id={`contact-${item.name}`} key={item.name}>
-                      <img src={item.src} alt={item.name} style={profileIconsSize} />
-                    </a>
-                  )
-                )}
+                <Box sx={profileIcons}>
+                  {profileLinks.map((item) =>
+                    item.name === "email" || item.name === "phone" ? (
+                      <div key={item.name}>
+                        <CopyToClipboard
+                          text={item.link}
+                          onCopy={() =>
+                            createNotification({
+                              type: "success",
+                              title: "Success",
+                              message: `${item.name} copied successfully!!`,
+                            })
+                          }
+                        >
+                          <img
+                            src={item.src}
+                            alt={item.name}
+                            style={profileIconsSize}
+                            id={`contact-${item.name}`}
+                          />
+                        </CopyToClipboard>
+                      </div>
+                    ) : (
+                      <a
+                        href={item.link}
+                        target="blank"
+                        id={`contact-${item.name}`}
+                        key={item.name}
+                      >
+                        <img src={item.src} alt={item.name} style={profileIconsSize} />
+                      </a>
+                    )
+                  )}
+                </Box>
+                <Box sx={profileIcons}>
+                  {" "}
+                  <Link activeClass="active" smooth spy to="contact">
+                    <Button variant="contained">
+                      <Typography
+                        variant="body1"
+                        color="#fff"
+                        pl={5}
+                        pr={5}
+                        pt={1}
+                        pb={1}
+                        sx={{ fontWeight: 600 }}
+                      >
+                        Contact Me
+                      </Typography>
+                    </Button>
+                  </Link>
+                </Box>
               </Box>
-              <Box sx={profileIcons}>
-                {" "}
-                <Link activeClass="active" smooth spy to="contact">
-                  <Button variant="contained">
-                    <Typography
-                      variant="body1"
-                      color="#fff"
-                      pl={5}
-                      pr={5}
-                      pt={1}
-                      pb={1}
-                      sx={{ fontWeight: 600 }}
-                    >
-                      Contact Me
-                    </Typography>
-                  </Button>
-                </Link>
-              </Box>
-            </Box>
+            </Slide>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box sx={boxStyling}>
-              <img src={portfolio} alt="portfolio" style={{ width: "75%" }} />
-            </Box>
+            <Slide direction="left" in={true} mountOnEnter unmountOnExit timeout={1000}>
+              <Box sx={boxStyling}>
+                <img src={portfolio} alt="portfolio" style={{ width: "75%" }} />
+              </Box>
+            </Slide>
           </Grid>
         </Grid>
       </Box>

@@ -18,6 +18,7 @@ import linkedin from "../../assets/png/linkedin.png";
 import github from "../../assets/png/github.png";
 import { profileIconsSizeContact } from "../banner/bannerCss";
 import CopyToClipboard from "react-copy-to-clipboard";
+import createNotification from "../../utils/alert";
 
 const classes = {
   fontWeight: 1000,
@@ -99,13 +100,13 @@ export default function ButtonAppBar(props) {
                           color="primary"
                           sx={navButton}
                           endIcon={<DownloadIcon />}
+                          key={item.id}
                         >
                           <a
                             href={resume}
                             download="Amarjeet-Kumar-Resume"
                             target="blank"
                             className={`nav-link ${item.id}`}
-                            key={item.id}
                             id="resume-link-1"
                           >
                             {item.title}
@@ -173,7 +174,16 @@ export default function ButtonAppBar(props) {
                 {profileLinks.map((item) =>
                   item.name === "email" || item.name === "phone" ? (
                     <div key={item.name}>
-                      <CopyToClipboard text={item.link} onCopy={() => window.alert("Copied!")}>
+                      <CopyToClipboard
+                        text={item.link}
+                        onCopy={() =>
+                          createNotification({
+                            type: "success",
+                            title: "Success",
+                            message: "Copied successfully!!!",
+                          })
+                        }
+                      >
                         <img
                           src={item.src}
                           alt={item.name}

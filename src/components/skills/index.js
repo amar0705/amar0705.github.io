@@ -30,7 +30,7 @@ const Skills = () => {
                 >
                   <ListItem>
                     <Typography variant="h5">
-                      <span class="skills-card-name">
+                      <span className="skills-card-name">
                         Demonstrated proficiency in <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>{" "}
                         to create visually appealing and user-friendly interfaces.
                       </span>
@@ -38,7 +38,7 @@ const Skills = () => {
                   </ListItem>
                   <ListItem>
                     <Typography variant="h5">
-                      <span class="skills-card-name">
+                      <span className="skills-card-name">
                         Proficient in <b>Node.js</b> and <b>Express.js</b> to create scalable and
                         robust server-side applications.
                       </span>
@@ -46,7 +46,7 @@ const Skills = () => {
                   </ListItem>
                   <ListItem>
                     <Typography variant="h5">
-                      <span class="skills-card-name">
+                      <span className="skills-card-name">
                         Experience working with NoSQL databases such as <b>MongoDB</b> to design and
                         implement data models for web applications.
                       </span>

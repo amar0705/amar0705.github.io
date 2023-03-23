@@ -2,6 +2,8 @@ import "./App.css";
 import HomePage from "./pages/homePage";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/fira-code";
+import "react-notifications/lib/notifications.css";
+import { NotificationContainer } from "react-notifications";
 
 const theme = createTheme({
   palette: {
@@ -41,6 +43,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <HomePage></HomePage>
+      <NotificationContainer />
     </ThemeProvider>
   );
 }
