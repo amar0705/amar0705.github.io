@@ -164,10 +164,10 @@ export default function ButtonAppBar(props) {
                   <b>Amarjeet Kumar</b>
                 </Typography>
                 <Typography variant="h6" color="text.secondary">
-                  <span id="contact-phone">+91 5678905678</span>
+                  <span id="contact-phone">+91-8178726246</span>
                 </Typography>
                 <Typography variant="h6" color="text.secondary">
-                  <span id="contact-email"> amar@gmail.com</span>
+                  <span id="contact-email"> amarkr0705@gmail.com</span>
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", gap: 2 }}>
