@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.30e0b210.css",
-    "main.js": "/static/js/main.ad11c4b0.js",
+    "main.js": "/static/js/main.36ef4460.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/DSC_0783 copy-photoaidcom-cropped.jpg": "/static/media/DSC_0783 copy-photoaidcom-cropped.284b2454af1b17274350.jpg",
+    "static/media/salonlex.png": "/static/media/salonlex.22aff87b93bbc84d289a.png",
     "static/media/portfolio.gif": "/static/media/portfolio.8a48801ecbc4c097c0d1.gif",
-    "static/media/resume.pdf": "/static/media/resume.e37eab9562a9004e6092.pdf",
+    "static/media/resume.pdf": "/static/media/resume.68f5630b981d066f28c2.pdf",
     "static/media/projects.gif": "/static/media/projects.a1dab7f324e0420513fe.gif",
     "static/media/skills.png": "/static/media/skills.9c190a44986f081b9d79.png",
     "static/media/wave.gif": "/static/media/wave.6454c7c86bae8a8d571d.gif",
-    "static/media/meat-me-once.jpeg": "/static/media/meat-me-once.bc2808675db922152428.jpeg",
     "static/media/better-buys.jpg": "/static/media/better-buys.9caf7f41ce31dea7d710.jpg",
     "static/media/fira-code-all-400-normal.woff": "/static/media/fira-code-all-400-normal.c050f0ce726c76d279c8.woff",
     "static/media/optimum-fitness.jpg": "/static/media/optimum-fitness.56bdd02d6ab4038551a4.jpg",
@@ -34,11 +34,11 @@
     "static/media/notification.ttf?s3g3t9": "/static/media/notification.c5d9251ea82e42f75381.ttf",
     "index.html": "/index.html",
     "main.30e0b210.css.map": "/static/css/main.30e0b210.css.map",
-    "main.ad11c4b0.js.map": "/static/js/main.ad11c4b0.js.map",
+    "main.36ef4460.js.map": "/static/js/main.36ef4460.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30e0b210.css",
-    "static/js/main.ad11c4b0.js"
+    "static/js/main.36ef4460.js"
   ]
 }
